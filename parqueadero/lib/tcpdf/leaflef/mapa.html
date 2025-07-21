@@ -1,0 +1,17 @@
+<!-- mapa.html -->
+<div id="map" style="height: 400px;"></div>
+<script>
+    const map = L.map('map').setView([4.7110, -74.0721], 13); // Bogotá, Colombia
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    // Marcadores desde la DB (ejemplo con PHP + JSON)
+    fetch('get_parqueaderos.php')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(parq => {
+                L.marker([parq.latitud, parq.longitud])
+                    .bindPopup(`<b>${parq.nombre}</b><br>Capacidad: ${parq.capacidad}`)
+                    .addTo(map);
+            });
+        });
+</script>

@@ -1,0 +1,36 @@
+parqueaderos/
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── scripts.js
+│   └── images/
+│       ├── logo.png
+│       └── favicon.ico
+├── includes/
+│   ├── conexion.php
+│   ├── auth.php
+│   ├── funciones.php
+│   └── header.php
+├── admin/
+│   ├── dashboard.php
+│   ├── reservas.php
+│   ├── facturas.php
+│   └── parqueaderos.php
+├── cliente/
+│   ├── dashboard.php
+│   ├── reservar.php
+│   ├── mis_reservas.php
+│   └── perfil.php
+├── libs/
+│   ├── tcpdf/          # Descargar de https://tcpdf.org/
+│   └── phpmailer/      # Descargar de https://github.com/PHPMailer/PHPMailer
+├── procesos/
+│   ├── login_proc.php
+│   ├── registro_proc.php
+│   └── reserva_proc.php
+├── index.php
+├── login.php
+├── registro.php
+├── logout.php
+└── config.php
